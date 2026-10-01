@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Body Setup */
+body {
+    background-color: #d8d4cd;
+    color: #2b2b2b;
+    font-family: 'Pretendard', sans-serif;
+    line-height: 1.45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+/* Strict A4 Document Dimensions */
+.a4-page {
+    background-color: #f7f4ed;
+    width: 210mm;
+    height: 297mm;
+    padding: 16mm 15mm;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.resume-header {
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.role-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    color: #c24827;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.candidate-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.4rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #222222;
+    line-height: 1.05;
+}
+
+.yellow-divider-main {
+    width: 100%;
+    height: 5px;
+    background-color: #e5a93c;
+    margin-bottom: 1.2rem;
+}
+
+/* 2 Column Layout */
+.resume-body {
+    display: grid;
+    grid-template-columns: 1fr 1.45fr;
+    gap: 1.5rem;
+    flex-grow: 1;
+}
+
+/* Section Common */
+.section-block {
+    margin-bottom: 1.1rem;
+}
+
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #222222;
+    text-transform: uppercase;
+}
+
+.yellow-bar {
+    width: 100%;
+    height: 3px;
+    background-color: #e5a93c;
+    margin: 0.2rem 0 0.5rem 0;
+}
+
+/* Narrative / About Text */
+.narrative-text {
+    font-size: 0.875rem;
+    color: #444;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.project-tech {
+    font-size: 0.875rem;
+    color: #444;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+/* Overview List */
+.info-list {
+    list-style: none;
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.info-list li {
+    margin-bottom: 0.3rem;
+    line-height: 1.35;
+}
+
+.info-list strong {
+    color: #111;
+}
+
+/* Objective Box */
+.objective-box {
+    background-color: #efebe2;
+    padding: 0.6rem 0.75rem;
+    border-left: 3px solid #c24827;
+    border-radius: 2px;
+}
+
+.obj-text {
+    font-size: 0.875rem;
+    color: #222;
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+}
+
+/* Education */
+.institution {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.project-header {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.edu-degree {
+    font-size: 0.825rem;
+    color: #555;
+}
+
+/* Contact */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+    color: #333;
+}
+
+.contact-item .icon {
+    font-weight: bold;
+    color: #e5a93c;
+    width: 14px;
+}
+
+/* RIGHT COLUMN - Circular Skills Indicator */
+.circle-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.circle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donut-chart {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.25rem;
+    position: relative;
+    background-color: #e8e2d5;
+}
+
+.donut-chart::after {
+    content: "";
+    width: 42px;
+    height: 42px;
+    background-color: #f7f4ed;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.tier-label {
+    z-index: 2;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.donut-chart.tier-high {
+    background: conic-gradient(#c24827 0% 90%, #e8e2d5 90% 100%);
+}
+
+.donut-chart.tier-mid {
+    background: conic-gradient(#e5a93c 0% 65%, #e8e2d5 65% 100%);
+}
+
+.donut-chart.tier-low {
+    background: conic-gradient(#888888 0% 40%, #e8e2d5 40% 100%);
+}
+
+.skill-group-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #222;
+    text-transform: uppercase;
+}
+
+.skill-sub {
+    font-size: 0.725rem;
+    color: #666;
+}
+
+/* Competency List Breakdown */
+.competency-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.comp-item {
+    background-color: #efebe2;
+    padding: 0.45rem 0.65rem;
+    border-left: 3px solid #e5a93c;
+    border-radius: 2px;
+}
+
+.category-header {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.15rem;
+    text-transform: uppercase;
+}
+
+.comp-item p {
+    font-size: 0.825rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Proficiency Tags */
+.tag {
+    display: inline-block;
+    padding: 1px 4px;
+    font-size: 0.725rem;
+    font-weight: 700;
+    border-radius: 2px;
+    margin: 0 3px 0 1px;
+}
+
+.tag.high { background-color: #c24827; color: #fff; }
+.tag.mid { background-color: #e5a93c; color: #111; }
+.tag.low { background-color: #a0a0a0; color: #fff; }
+
+/* Timeline Style / Contribution */
+.timeline-style-block {
+    background-color: #efebe2;
+    padding: 0.6rem;
+    border-radius: 2px;
+}
+
+.timeline-header {
+    margin-bottom: 0.3rem;
+}
+
+.badge-tag {
+    font-size: 0.7rem;
+    background-color: #c24827;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 2px;
+    font-weight: 600;
+}
+
+.timeline-header h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    color: #222;
+    margin-top: 0.15rem;
+}
+
+.bullet-list {
+    list-style-type: square;
+    padding-left: 0.9rem;
+    font-size: 0.825rem;
+    color: #444;
+}
+
+.bullet-list li {
+    margin-bottom: 0.2rem;
+}
+
+/* A4 Print Rule */
+@media print {
+    body {
+        background: none;
+        padding: 0;
+    }
+    .a4-page {
+        box-shadow: none;
+        margin: 0;
+        width: 210mm;
+        height: 297mm;
+    }
+}
